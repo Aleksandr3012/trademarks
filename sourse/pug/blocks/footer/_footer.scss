@@ -1,77 +1,70 @@
 .footer {
 	background-color: #2f4867;
-	padding-top: rem(45);
-	padding-bottom: rem(60);
-	@include media-breakpoint-down(md){
+	@include media-breakpoint-up(lg) {
+		padding-top: rem(45);
+		padding-bottom: rem(60);
+	}
+	padding-bottom: rem(30);
+	padding-top: rem(48);
+	@include media-breakpoint-down(md) {
 		text-align: center !important;
 	}
 
 	picture {
 		opacity: 0.1;
 	}
-	ul {
-		@include media-breakpoint-up(lg) {
-			columns: 2;
-		}
-	}
 
 	li {
 		list-style: none;
 		a {
 			color: #fff;
+			line-height: 1.7;
+			@include media-breakpoint-down(md) {
+				font-size: rem(24);
+				&.text-primary {
+					font-weight: 600;
+				}
+			}
+
+		}
+	}
+
+	&__menu {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		@include media-breakpoint-up(lg) {
+			flex-direction: row-reverse;
+			justify-content: flex-start;
+		}
+
+		ul {
+			flex-shrink: 0;
+			margin-bottom: 0;
+			@include media-breakpoint-up(lg) {
+				&:first-child {
+					margin-right: auto;
+				}
+
+				&:last-child {
+					margin-right: rem(120);
+				}
+			}
 		}
 	}
 
 	&__logo {
-		color: #fff;
-		position: relative;
 
-		&::before {
-			content: '';
-			background-color: #3280ef;
-			width: rem(52px);
-			height: rem(52px);
-		}
-	}
-
-	&__col {
-		@include media-breakpoint-up(lg){
-			text-align: right;
-		}
-	}
-
-	&__mail {
-		display: block;
-		color: #fff !important;
-		text-decoration: none !important;
-		margin-bottom: rem(23);
-
-		&:hover {
-			opacity: 0.6;
-		}
-	}
-
-	p {
-		color: #fff;
-	}
-
-	&__tel {
-		color: #fff !important;
-		text-decoration: none !important;
-
-		&:hover {
-			opacity: 0.6;
-		}
-	}
-
-	&__logo {
 		position: relative;
 		z-index: 1;
 		@extend .h6;
 		font-weight: 700;
 		color: #fff !important;
 		text-decoration: none !important;
-		margin-bottom: rem(50);
+		margin-bottom: rem(56);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(50);
+		}
 		display: block;
 
 		&::before {
@@ -85,9 +78,64 @@
 		}
 	}
 
+	&__col {
+		@include media-breakpoint-up(lg) {
+			text-align: right;
+		}
+	}
+
+	&__mail {
+		display: block;
+		color: #fff !important;
+		text-decoration: none !important;
+		margin-bottom: rem(17);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(23);
+		}
+
+		&:hover {
+			opacity: 0.6;
+		}
+
+		@include media-breakpoint-down(md){
+			font-size: rem(22);
+		}
+	}
+
+	p {
+		color: #fff;
+
+		@include media-breakpoint-down(md){
+			padding-top: rem(48);
+			font-size: rem(22);
+			margin-bottom: rem(12);
+		}
+	}
+
+	&__tel {
+		color: #fff !important;
+		text-decoration: none !important;
+
+
+		&:hover {
+			opacity: 0.6;
+		}
+
+		@include media-breakpoint-down(md) {
+			font-size: rem(22);
+			margin-bottom: rem(45);
+			display: block;
+		}
+	}
+
+
 	&__copyright {
 		color: #fff;
 		opacity: 0.5;
+
+		@include media-breakpoint-down(md){
+			font-size: rem(20);
+		}
 	}
 
 	.container {

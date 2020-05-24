@@ -1,14 +1,24 @@
 // start .sGoals
 .sGoals {
 	position: relative;
-	padding-bottom: rem(38);
+	padding-bottom: rem(46);
+	@include media-breakpoint-up(lg){
+		padding-bottom: rem(38);
+	}
 	@include media-breakpoint-down(md){
 		padding-top: 0;
 	}
+
 	&__rightCol {
 		position: relative;
 		@include media-breakpoint-up(lg){
 			margin-top: rem(-142);
+		}
+	}
+
+	@include media-breakpoint-down(sm){
+		.container {
+			max-width: rem(390);
 		}
 	}
 
@@ -28,10 +38,14 @@
 
 	h2 {
 		font-weight: 700;
-		margin-bottom: rem(19);
+		margin-bottom: rem(23);
+		@include media-breakpoint-up(lg){
+			margin-bottom: rem(19);
+
+		}
 		@include media-breakpoint-down(md){
-			font-size: rem(30);
-			padding-top: rem(30);
+			font-size: rem(29);
+			padding-top: rem(33);
 		}
 	}
 
@@ -49,7 +63,7 @@
 		}
 		width: 111vw;
 		@include media-breakpoint-down(md){
-			margin-left: rem(-15);
+			margin-left: rem(-60);
 		}
 	}
 

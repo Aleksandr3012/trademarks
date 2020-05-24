@@ -1,0 +1,24 @@
+mixin footer()
+	+b.FOOTER.footer.block-with-lazy
+		.container
+			+pic('map.png','bg')
+			.row.justify-content-between
+				.col-md-4.text-center.order-lg-second
+					+e.logo(href="#") Attornium
+					+e.copyright.d-none.d-lg-block Copyright © Attornium 2020
+				.col-lg.order-lg-first
+					ul
+						li: a(href="#") About
+						li: a(href="#") Services
+						li: a(href="#") News
+						li: a(href="#") Contact us
+						li: a(href="#") Register trademark
+						li: a(href="#") FAQ
+						li: a(href="#") Support
+						li: a(href="#") Help
+
+				+e.col.col
+					p 48-49 Russell Square, WC1B 4JP, London
+					+e.mail(href="mailto:info@attornium.net") info@attornium.net
+					+e.tel(href="tel:18006434300") 1 800 643 4300
+			+e.copyright.d-lg-none Copyright © Attornium 2020

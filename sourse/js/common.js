@@ -92,10 +92,10 @@ const JSCCommon = {
 		});
 	},
 	// /табы  
-	inputMask() {
-		// mask for input
-		$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
-	}
+	// inputMask() {
+	// 	// mask for input
+	// 	$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
+	// }
 	// /inputMask
 
 };
@@ -118,7 +118,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/main.png);"></div>');
+	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/article.png);"></div>');
 	// /добавляет подложку для pixel perfect
 
 

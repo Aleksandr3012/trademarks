@@ -1,0 +1,23 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAbout/_sAbout.pug 
+include ../blocks/sTestimonals/_sTestimonals.pug 
+include ../blocks/sContent/_sContent.pug 
+
+block variables
+	- let  mainPage= 'innerPage'
+block title
+	- let  title= 'About us'
+	title= title
+block pagecontent 
+	+mob-mnu()
+	+header()
+		//- +topLine()
+		+top-nav()
+		//- +headerBlock()
+	+sContent
+		+breadcrumb('Home page', title)
+	+footer()

@@ -38,12 +38,31 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/card";
 @import "./node_modules/bootstrap/scss/breadcrumb";
 .breadcrumb{
+  @include media-breakpoint-up(md) {
+   padding-top: rem(30);
+  }
+  margin-bottom: rem(6);
   .active{
     a{
       color: $breadcrumb-active-color;
       pointer-events: none;
     }
   }
+  .item:not(.active) {
+    text-decoration: underline;
+  }
+}
+
+.breadcrumb-item+.breadcrumb-item:before {
+  background-image: url('../img/svg/breadcrumbArrow.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: rem(12);
+  position: relative;
+  width: rem(12);
+  height: rem(13);
+  margin-left: 2px;
+  margin-right: rem(10);
 }
 @import "./node_modules/bootstrap/scss/pagination"; 
   .pagination-wrapper ul{

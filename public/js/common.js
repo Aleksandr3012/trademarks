@@ -89,12 +89,12 @@ var JSCCommon = {
 		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
 			$(this).addClass('active').siblings().removeClass('active').closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active').eq($(this).index()).show().addClass('active');
 		});
-	},
-	// /табы  
-	inputMask: function inputMask() {
-		// mask for input
-		$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
-	} // /inputMask
+	} // /табы  
+	// inputMask() {
+	// 	// mask for input
+	// 	$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
+	// }
+	// /inputMask
 
 };
 
@@ -110,7 +110,7 @@ function eventHandler() {
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/main.png);"></div>');
+	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/article.png);"></div>');
 	// /добавляет подложку для pixel perfect
 	// const url = document.location.href;
 	// $.each($(".top-nav__nav a "), function() {

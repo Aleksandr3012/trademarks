@@ -4,6 +4,7 @@
 	z-index: 1;
 	@include media-breakpoint-down(md) {
 		padding-top: 0;
+		padding-bottom: 0;
 	}
 
 	&__leftCol {
@@ -68,6 +69,10 @@
 		margin-top: rem(-11);
 		padding-top: 2px;
 		padding-left: rem(40);
+		@include media-breakpoint-down(md){
+			background-color: #2f4867;
+			padding-bottom: rem(30);
+		}
 
 		.icon {
 			position: absolute;
@@ -126,6 +131,9 @@
 		top: rem(-30);
 		width: rem(1500px);
 		min-height: rem(480);
+		@include media-breakpoint-up(lg){
+			left: rem(-41);
+		}
 		left: rem(-190);
 		@include media-breakpoint-up(lg) {
 			min-height: rem(460px);

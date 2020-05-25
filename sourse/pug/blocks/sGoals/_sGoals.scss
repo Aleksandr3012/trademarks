@@ -30,13 +30,8 @@
 		text-transform: uppercase;
 		font-weight: 700;
 		left: rem(-41);
-		padding: rem(29) rem(24) rem(23);
-		top: 1px;
-		@include media-breakpoint-up(xl){
-			padding: rem(30) rem(23) rem(23);
-			top: 0;
-
-		}
+		padding: rem(21) rem(23) rem(22);
+		top: rem(10);
 		@include media-breakpoint-down(md){
 			display: none;
 		}
@@ -70,7 +65,7 @@
 		@include media-breakpoint-up(xl){
 			width: rem(1054);
 		}
-		width: 111vw;
+		width: 120vw;
 		@include media-breakpoint-only(md){
 			margin-left: rem(-150);
 		}
@@ -84,7 +79,7 @@
 
 	&__contact {
 		margin-top: rem(69);
-		@include media-breakpoint-down(lg){
+		@include media-breakpoint-down(md){
 			max-width: 100%;
 		}
 	}

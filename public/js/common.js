@@ -107,8 +107,8 @@ function eventHandler() {
 	svg4everybody({});
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
-	JSCCommon.mobileMenu();
-	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
+	JSCCommon.mobileMenu(); // JSCCommon.inputMask();
+	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 	// $(".main-wrapper").after('<div class="screen" style="background-image: url(screen/article.png);"></div>');
 	// /добавляет подложку для pixel perfect

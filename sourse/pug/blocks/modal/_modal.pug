@@ -33,8 +33,7 @@ mixin modal()
 	//- 			br 
 	.d-none
 		+form-wrap()(id="modal-call" class="  modal-win modal-form" )
-			.text-center
-				+e.title.h3.ttu Contact us
+			+e.title.h3.ttu Contact us
 			+input("Enter your name", "text", "Your name")(required) 
 			+input("Enter your contact phone number","tel","Phone number")(required)
 			+input("Enter your contact email","mail","Email")(required)

@@ -26,6 +26,14 @@
 		&__input {
 			border-radius: 0;
 		}
+
+		&__btn {
+			font-size: $em-base;
+			width: rem(200);
+			margin-left: auto;
+			margin-right: auto;
+		}
+
 	}
 }
 

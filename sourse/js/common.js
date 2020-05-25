@@ -114,7 +114,7 @@ function eventHandler() {
 
 	JSCCommon.mobileMenu();
 
-	JSCCommon.inputMask();
+	// JSCCommon.inputMask();
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect

@@ -4,7 +4,7 @@ mixin headerBlock()
 		.container
 			+b.section-title.text-center
 				h1 Trademark Registration in&nbsp;China
-				h3 Qualified support and assistance
+				.h3 Qualified support and assistance
 			+e.register.btn(href="#") Register now
 	// end headerBlock
 	
@@ -14,6 +14,17 @@ mixin headerBlock-Qwiz()
 		.container
 			+b.section-title.text-center
 				h1 Trademark Registration in&nbsp;China
-				h3 Qualified support and assistance 
+				.h3 Qualified support and assistance 
+
+mixin headerBlockForm()
+	+b.headerBlock#headerBlock&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h1 Trademark Registration in&nbsp;China
+				.h3 Qualified support and assistance
+			+form-wrap()
+			
+				+input("Search now", "search")
+				+e.quote.btn(href="#") GET QUOTE
 	// end headerBlock
 	

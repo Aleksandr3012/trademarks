@@ -8,7 +8,16 @@
 .swiper-button-next,
 .swiper-button-prev {
 	z-index: 11;
-	top: 93.5%;
+	top: 90%;
+	@include media-breakpoint-up(md) {
+		top: 86%;
+	}
+	@include media-breakpoint-up(lg) {
+		top: 78%;
+	}
+	@include media-breakpoint-up(xl) {
+		top: 71%;
+	}
 	&::after {
 		content: '';
 	}
@@ -36,7 +45,7 @@
 
 .swiper-button-prev {
 	@include media-breakpoint-down(md){
-		left: rem(-10);
+		// left: rem(-10);
 	}
 	&::before {
 		background-image: url('../img/svg/arrowL.svg');
@@ -62,6 +71,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	@include media-breakpoint-down(md) {
+		margin-left: rem(-25);
+	}
 }
 
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {

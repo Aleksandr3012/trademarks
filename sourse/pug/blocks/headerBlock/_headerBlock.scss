@@ -6,7 +6,7 @@
 	}
 	padding-bottom: rem(80);
 
-	h1, h3 {
+	h1, .h3 {
 		color: #fff;
 	}
 
@@ -24,7 +24,7 @@
 		}
 	}
 
-	h3 {
+	.h3 {
 		@include media-breakpoint-down(md) {
 			font-size: rem(18);
 		}
@@ -99,6 +99,31 @@
 	}
 
 	@include media-breakpoint-down(xs) {
+	}
+	.form-wrap {
+		position: relative;
+		max-width: rem(650);
+		margin-left: auto;
+		margin-right: auto;
+		form {
+			display: flex;
+		}
+
+		&__input-wrap {
+			width: 100%;
+			@include media-breakpoint-up(md){
+				margin-right: rem(10);
+			}
+		}
+
+		&__quote {
+			flex-shrink: 0;
+			width: rem(120);
+			@include media-breakpoint-up(sm) {
+				width: rem(200);
+			}
+			max-height: rem(50);
+		}
 	}
 }
 

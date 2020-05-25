@@ -18,8 +18,8 @@ var headerBlockVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
-var sContactVue = new Vue({
-	el: '#sContact',
+var sContentVue = new Vue({
+	el: '#sContent',
 	data: {
 		imgSRc: 'img/'
 	},
@@ -35,16 +35,16 @@ var sAboutVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
-var sContentVue = new Vue({
-	el: '#sContent',
+var sFormVue = new Vue({
+	el: '#sForm',
 	data: {
 		imgSRc: 'img/'
 	},
 	created: function created() {},
 	computed: {}
 });
-var sFormVue = new Vue({
-	el: '#sForm',
+var sContactVue = new Vue({
+	el: '#sContact',
 	data: {
 		imgSRc: 'img/'
 	},
@@ -60,20 +60,20 @@ var sGoalsVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
+var topLineVue = new Vue({
+	el: '#topLine',
+	data: {
+		imgSRc: 'img/'
+	},
+	created: function created() {},
+	computed: {}
+});
 var sTestimonalsVue = new Vue({
 	el: '#sTestimonals',
 	data: {
 		imgSRc: 'img/'
 	},
 	methods: {},
-	created: function created() {},
-	computed: {}
-});
-var topLineVue = new Vue({
-	el: '#topLine',
-	data: {
-		imgSRc: 'img/'
-	},
 	created: function created() {},
 	computed: {}
 });

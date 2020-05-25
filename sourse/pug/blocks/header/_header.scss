@@ -19,6 +19,12 @@
 		// z-index: -1;
 		bottom: rem(-64);
 	}
+	&--qwiz{
+		&::before{
+			bottom: auto;
+			top: rem(-60);
+		}
+	}
 
 	@include media-breakpoint-up(xl) {
 	}

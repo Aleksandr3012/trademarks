@@ -9,7 +9,7 @@
 	&::before {
 		content: '';
 		width: 90vw;
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(md) {
 			width: rem(500);
 		}
 		height: rem(500);

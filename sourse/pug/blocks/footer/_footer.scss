@@ -12,12 +12,17 @@
 
 	picture {
 		opacity: 0.1;
+		width: rem(617);
+		margin-top: rem(-20);
 	}
 
 	li {
 		list-style: none;
 		a {
 			color: #fff;
+			@include media-breakpoint-up(lg) {
+				line-height: 1.5;
+			}
 			line-height: 1.7;
 			@include media-breakpoint-down(md) {
 				font-size: rem(24);
@@ -25,7 +30,6 @@
 					font-weight: 600;
 				}
 			}
-
 		}
 	}
 
@@ -41,12 +45,18 @@
 		ul {
 			flex-shrink: 0;
 			margin-bottom: 0;
-			@include media-breakpoint-up(lg) {
-				&:first-child {
+
+			&:first-child {
+				@include media-breakpoint-up(lg) {
 					margin-right: auto;
 				}
+			}
 
-				&:last-child {
+			&:last-child {
+				@include media-breakpoint-up(lg) {
+					margin-right: rem(60);
+				}
+				@include media-breakpoint-up(xl) {
 					margin-right: rem(120);
 				}
 			}
@@ -54,7 +64,6 @@
 	}
 
 	&__logo {
-
 		position: relative;
 		z-index: 1;
 		@extend .h6;
@@ -62,7 +71,7 @@
 		color: #fff !important;
 		text-decoration: none !important;
 		margin-bottom: rem(56);
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			margin-bottom: rem(50);
 		}
 		display: block;
@@ -89,33 +98,29 @@
 		color: #fff !important;
 		text-decoration: none !important;
 		margin-bottom: rem(17);
-		@include media-breakpoint-up(lg){
-			margin-bottom: rem(23);
-		}
 
 		&:hover {
 			opacity: 0.6;
 		}
 
-		@include media-breakpoint-down(md){
+		@include media-breakpoint-down(md) {
 			font-size: rem(22);
 		}
 	}
 
 	p {
 		color: #fff;
+		margin-bottom: rem(12);
 
-		@include media-breakpoint-down(md){
+		@include media-breakpoint-down(md) {
 			padding-top: rem(48);
 			font-size: rem(22);
-			margin-bottom: rem(12);
 		}
 	}
 
 	&__tel {
 		color: #fff !important;
 		text-decoration: none !important;
-
 
 		&:hover {
 			opacity: 0.6;
@@ -128,12 +133,11 @@
 		}
 	}
 
-
 	&__copyright {
 		color: #fff;
 		opacity: 0.5;
 
-		@include media-breakpoint-down(md){
+		@include media-breakpoint-down(md) {
 			font-size: rem(20);
 		}
 	}

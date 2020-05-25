@@ -2,7 +2,7 @@
 .sTestimonals {
 	position: relative;
 	z-index: 1;
-	@include media-breakpoint-down(md){
+	@include media-breakpoint-down(md) {
 		padding-top: 0;
 	}
 
@@ -12,21 +12,25 @@
 		align-items: flex-end;
 		min-height: rem(320);
 		justify-content: center;
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			justify-content: flex-end;
 			min-height: rem(480);
 		}
 
-		@include media-breakpoint-down(md){
-			overflow: hidden;
+		@include media-breakpoint-up(sm) {
+			min-height: rem(400);
+		}
+
+		@include media-breakpoint-down(md) {
 			padding-bottom: rem(58);
+			overflow-y: hidden;
 		}
 
 		.h6 {
 			// position: absolute;
 			position: relative;
 			z-index: 1;
-			@include media-breakpoint-up(lg){
+			@include media-breakpoint-up(lg) {
 				margin-right: rem(67);
 			}
 			padding-bottom: rem(3);
@@ -34,7 +38,6 @@
 			color: #fff;
 			font-weight: 500;
 		}
-
 	}
 
 	&__imgWrap {
@@ -43,10 +46,13 @@
 		top: rem(-160);
 		z-index: -2;
 		left: rem(-130);
-		@include media-breakpoint-up(lg){
-			left: rem(-197);
-			top: rem(38);
-			width: rem(692);
+		@include media-breakpoint-up(lg) {
+			left: rem(-196);
+			top: rem(39);
+			width: rem(690);
+		}
+		@include media-breakpoint-only(md) {
+			width: 100vw;
 		}
 		height: 100%;
 		display: block;
@@ -68,10 +74,10 @@
 			z-index: 10;
 			background-color: $primary;
 			width: rem(81);
-			height: rem(79);
+			height: rem(80);
 			padding: rem(30);
 			left: 0;
-			@include media-breakpoint-up(lg){
+			@include media-breakpoint-up(lg) {
 				left: rem(-41);
 			}
 			top: rem(-30);
@@ -79,8 +85,8 @@
 			// color: #fff;
 		}
 
-
-		.h2, .h6 {
+		.h2,
+		.h6 {
 			color: #fff;
 			position: relative;
 		}
@@ -90,12 +96,11 @@
 			letter-spacing: rem(0.5);
 			font-size: rem(28);
 			padding-bottom: rem(3);
-			@include media-breakpoint-up(lg){
+			@include media-breakpoint-up(lg) {
 				padding-bottom: rem(13);
-
 			}
 
-			@include media-breakpoint-down(md){
+			@include media-breakpoint-down(sm) {
 				max-width: rem(360);
 			}
 		}
@@ -103,14 +108,13 @@
 		.h6 {
 			opacity: 0.5;
 		}
-
 	}
 
 	&__title {
 		@extend .h6;
 		padding-left: rem(55);
 		padding-bottom: rem(74);
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(lg) {
 			padding-left: rem(31);
 			padding-bottom: rem(71);
 		}
@@ -118,17 +122,18 @@
 
 	&__rightImageWrapper {
 		position: absolute;
-		left: rem(-41);
+		// left: rem(-41);
 		top: rem(-30);
 		width: rem(1500px);
-		height: rem(480);
-		@include media-breakpoint-up(lg){
-			height: rem(460px);
+		min-height: rem(480);
+		left: rem(-190);
+		@include media-breakpoint-up(lg) {
+			min-height: rem(460px);
 		}
 		overflow: hidden;
 		background-color: #2f4867;
 		img {
-			opacity: .2;
+			opacity: 0.2;
 		}
 	}
 

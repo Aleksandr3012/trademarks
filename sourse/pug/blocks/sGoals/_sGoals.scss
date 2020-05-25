@@ -3,7 +3,7 @@
 	position: relative;
 	padding-bottom: rem(46);
 	@include media-breakpoint-up(lg){
-		padding-bottom: rem(38);
+		padding-bottom: rem(40);
 	}
 	@include media-breakpoint-down(md){
 		padding-top: 0;
@@ -25,12 +25,18 @@
 	&__tm {
 		position: absolute;
 		background-color: $light;
+		z-index: 3;
 		@extend .h3;
 		text-transform: uppercase;
-		padding: rem(30) rem(23) rem(23);
 		font-weight: 700;
 		left: rem(-41);
-		top: 0;
+		padding: rem(29) rem(24) rem(23);
+		top: 1px;
+		@include media-breakpoint-up(xl){
+			padding: rem(30) rem(23) rem(23);
+			top: 0;
+
+		}
 		@include media-breakpoint-down(md){
 			display: none;
 		}
@@ -59,10 +65,19 @@
 		@include media-breakpoint-up(lg){
 			position: absolute;
 			left: rem(39);
-			width: rem(1050);
+			width: rem(1052);
+		}
+		@include media-breakpoint-up(xl){
+			width: rem(1054);
 		}
 		width: 111vw;
-		@include media-breakpoint-down(md){
+		@include media-breakpoint-only(md){
+			margin-left: rem(-150);
+		}
+		@include media-breakpoint-only(sm) {
+			margin-left: rem(-205);
+		}
+		@include media-breakpoint-down(xs){
 			margin-left: rem(-60);
 		}
 	}

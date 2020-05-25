@@ -143,15 +143,16 @@ mixin mnu()
 	//- +e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
 		//- each linkPatch, linkName in nav
 			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
-	ul&attributes(attributes)
-		li
-			ul
-				li: a(href="#") About
-				li: a(href="#") Services
-		li
-			ul
-				li: a(href="#") News
-				li: a(href="#") Contact us
+	+e.mnu&attributes(attributes)
+		ul
+			li
+				ul
+					li: a(href="#") About
+					li: a(href="#") Services
+			li
+				ul
+					li: a(href="#") News
+					li: a(href="#") Contact us
 //- /menu
 
 

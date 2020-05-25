@@ -1,3 +1,4 @@
+
 extends layout/main.pug
 
 
@@ -6,6 +7,7 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sAbout/_sAbout.pug 
 include ../blocks/sTestimonals/_sTestimonals.pug 
 include ../blocks/sGoals/_sGoals.pug 
+include ../blocks/sQwiz/_sQwiz.pug 
 
 block variables
 	- let  mainPage= null
@@ -15,10 +17,8 @@ block title
 block pagecontent 
 	+mob-mnu()
 	+top-nav()
-	+header()
+	+header()(class="header--qwiz")
 		//- +topLine()
-		+headerBlock()
-	+sAbout()
-	+sTestimonals()
-	+sGoals()
+		+headerBlock-Qwiz()
+	+sQwiz
 	+footer()

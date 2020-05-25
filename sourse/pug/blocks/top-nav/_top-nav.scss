@@ -1,7 +1,8 @@
 .top-nav {
 	padding-top: rem(76);
-	// position: absolute;
-	top: 100%;
+	position: absolute;
+	// top: 100%;
+	
 	// @include clearfix;ss
 	z-index: 20;
 	@include mt;

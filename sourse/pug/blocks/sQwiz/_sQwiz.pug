@@ -1,0 +1,111 @@
+mixin sQwiz()
+	// start sQwiz
+	+b.sQwiz.section#sQwiz&attributes(attributes)
+		.container
+			+e.FORM.wrap
+				mixin item(pr, t, p, btn)
+					+e.block
+						if pr
+							+e.progress
+								+e.progress-bar(style=`width:${ pr / 5 * 100}%`)
+							+e.head
+								+e.back
+									img(src="img/svg/arrow.svg", alt="")
+								+e.title= t
+								+e.text= p
+							+e.body
+								block
+							
+							+e.footer
+								if !btn
+									+e.btn(type='button') Next step
+								else
+									+e.btn(type='submit') SEND A REQUEST
+						else
+							block
+					// /.block
+				+item("1",'Step 1: Choose your region of interest','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.')
+					.row.justify-content-md-between
+						mixin region(i, t)
+							.col-md-auto.col-sm-6
+								+b.LABEL.region-input
+									input(type="radio" name="region" value= t) 
+									+e.img-wrap
+										img(src=`img/@2x/${i}`, alt="")
+									+e.title= t
+						+region("China.png",'China')
+						+region("bitmap.png",'Macao')
+						+region("lang3.png",'Hong Kong')
+						+region("lang4.png",'Malaysia')
+				+item("2",'Step 2: What kind of service are you interested in?','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.')
+					mixin servise(t, pr)
+						+b.LABEL.servise-input
+								input(type="checkbox" name="region" value= t) 
+								+e.lab
+								span.col
+									span.row
+										+e.title.col= t
+										+e.price.col-sm-auto.strong.ttu= pr
+					+servise("Trademark search with professional report and recommendations (1 class)",'250 USD')
+					+servise("Registration of a Chinese trademark in 1 class, 10 subclasses",'500 USD')
+					+servise("Response to an official Action",'450 USD')
+					+servise("Response for a provisional refusal",'720 USD')
+					+servise("Renewal of a trademark",'800 USD')
+					+servise("Assignment of a trademark (Change of the holder)",'600 USD')
+					+servise("Change of name or address of registrant",'260 USD')
+					+e.servise-total
+						.row.strong.ttu
+							.col TOTAL
+							.col-auto  1170 USD
+				+item("3",'Step 3: Specialist experience level','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.')
+					.row.justify-content-md-between
+						mixin region(i, t, p)
+							.col-md-auto.col-sm-6
+								+b.LABEL.region-input
+									input(type="radio" name="region" value= t) 
+									+e.img-wrap--star
+										block  
+										- for (var x = 0; x < i; x++)
+											img(src=`img/svg/star.svg`, alt="")
+									+e.title= t
+									+e.text= p
+						+region(1,'Regular','-10% fees')
+						+region(2,'Trusted','+20% fees')
+						+region(2,'Senior','+40% fees')
+							img(src=`img/svg/star.svg`, alt="")
+							.w-100
+						+region(4,'Superior','+60% fees')
+				+item("4",'Step 4: Select a contractor','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.')
+					mixin contractor(i,t, y)
+						+b.LABEL.contractor-input
+								input(type="radio" name="contractor" value= t) 
+								+e.lab
+									span.row
+										span.col-auto
+											+e.img-wrap
+												img(src=`img/@2x/${i}`, alt="")
+										span.col
+											+e.head.row
+												+e.title.col.strong.h6= t 
+													img(src="img/svg/star.svg", alt="")
+												.col-auto.small.strong= y
+											small Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+					+contractor('contractor-1.jpg','Jing Chao','12 years experience')
+					+contractor('contractor-2.jpg','Chen Li Kong','7 years experience')
+					+contractor('contractor-3.jpg','Miu Ka Tong','4 years experience')
+				+item("5",'Step 5: Enter your contact data','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.','SEND A REQUEST')
+					+b.form-wrap
+						+input('Enter your first name','text','First name')
+						+input('Enter your last name','text','Last name')
+						+input('Enter your contact phone number','tel','Phone number')
+						+input('Enter your contact email','email','Email')
+				+item()
+					+e.thanks.text-center
+						img.mb-3(src="img/svg/check-lg.svg", alt="")
+						.h3.strong Congrats!
+						p Our manager will contact you soon!
+							br
+							| Thank you!
+					+e.footer
+						+e.btn(href='/') GO HOME
+	// end sQbody	// end sQwiz

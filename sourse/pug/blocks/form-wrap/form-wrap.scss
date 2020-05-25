@@ -12,9 +12,15 @@
  		cursor: pointer;
  	}
  	label{
- 		width: 100%;
+ 		 
  		display: block;
- 	}
+	 }
+	 &__title-input{
+		 font-weight: bold;
+		 @extend .small;
+		 margin-bottom: rem(5);
+
+	 }
 }
 
 

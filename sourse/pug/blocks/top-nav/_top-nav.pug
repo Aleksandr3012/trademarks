@@ -15,9 +15,15 @@ mixin mob-mnu()
 			+b.toggle-menu-mobile--js
 				span
 			+e.inner
-			
+				+e.logoWrap
+					+e.logo(href="#") Attornium
 				+mnu()
-				.text-right
+				+e.bottomBlock
+					+e.register.btn(href="#") Register now
+					+e.address.h6 48-49 Russell Square, WC1B 4JP, London
+					+e.mail.h6(href="mailto:info@attornium.net") info@attornium.net
+					+e.tel(href="tel:18006434300") 1 800 643 4300
+					+e.copyright.h6 Copyright © Attornium 2020
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav

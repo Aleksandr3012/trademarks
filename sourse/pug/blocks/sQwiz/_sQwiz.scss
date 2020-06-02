@@ -39,9 +39,14 @@
 		&__footer{
 			@include media-breakpoint-up(sm) {
 
-				padding: 0 rem(70 - 28) rem(30);
+				padding: rem(10) rem(70 - 28) rem(20);
 			}
 			padding: 0 rem(40) rem(20);
+		}
+
+		&__body {
+			max-height: rem(600);
+			overflow-y: auto;
 		}
 
 		&__head{

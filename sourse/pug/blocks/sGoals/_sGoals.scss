@@ -29,9 +29,14 @@
 		@extend .h3;
 		text-transform: uppercase;
 		font-weight: 700;
-		left: rem(-41);
 		padding: rem(21) rem(23) rem(22);
 		top: rem(10);
+		left: rem(-40);
+		@include media-breakpoint-up(xl) {
+			padding: rem(22) rem(23) rem(22);
+			left: rem(-41);
+			top: rem(9);
+		}
 		@include media-breakpoint-down(md){
 			display: none;
 		}
@@ -63,9 +68,9 @@
 			width: rem(1052);
 		}
 		@include media-breakpoint-up(xl){
-			width: rem(1054);
+			width: rem(1065);
 		}
-		width: 120vw;
+		width: 135vw;
 		@include media-breakpoint-only(md){
 			margin-left: rem(-150);
 		}
@@ -73,7 +78,7 @@
 			margin-left: rem(-205);
 		}
 		@include media-breakpoint-down(xs){
-			margin-left: rem(-60);
+			margin-left: rem(-100);
 		}
 	}
 

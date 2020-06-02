@@ -6,6 +6,7 @@
 	}
 	padding-bottom: rem(30);
 	padding-top: rem(48);
+	position: relative;
 	@include media-breakpoint-down(md) {
 		text-align: center !important;
 	}

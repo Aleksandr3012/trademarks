@@ -24,7 +24,7 @@
 
 		@include media-breakpoint-down(md) {
 			padding-bottom: rem(58);
-			overflow-y: hidden;
+			overflow: hidden;
 		}
 
 		.h6 {

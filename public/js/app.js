@@ -1,6 +1,5 @@
 "use strict";
 
-// .footer scripts goes here
 var header = new Vue({
 	el: '#header',
 	data: {
@@ -9,7 +8,8 @@ var header = new Vue({
 	},
 	created: function created() {},
 	computed: {}
-});
+}); // .footer scripts goes here
+
 var headerBlockVue = new Vue({
 	el: '#headerBlock',
 	data: {

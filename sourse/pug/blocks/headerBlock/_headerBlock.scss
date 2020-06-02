@@ -43,10 +43,10 @@
 	}
 
 	&--qwiz{
-		padding-bottom: rem(250);
+		padding-bottom: rem(200);
 			@include media-breakpoint-up(lg) {
 
-				padding-top: rem(170);
+				padding-top: rem(150);
 			}
 	}
 

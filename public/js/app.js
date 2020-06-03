@@ -1,5 +1,6 @@
 "use strict";
 
+// .footer scripts goes here
 var header = new Vue({
 	el: '#header',
 	data: {
@@ -8,8 +9,7 @@ var header = new Vue({
 	},
 	created: function created() {},
 	computed: {}
-}); // .footer scripts goes here
-
+});
 var headerBlockVue = new Vue({
 	el: '#headerBlock',
 	data: {
@@ -51,8 +51,8 @@ var sFormVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
-var sGoalsVue = new Vue({
-	el: '#sGoals',
+var sQwizVue = new Vue({
+	el: '#sQwiz',
 	data: {
 		imgSRc: 'img/'
 	},
@@ -60,8 +60,8 @@ var sGoalsVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
-var sQwizVue = new Vue({
-	el: '#sQwiz',
+var sGoalsVue = new Vue({
+	el: '#sGoals',
 	data: {
 		imgSRc: 'img/'
 	},

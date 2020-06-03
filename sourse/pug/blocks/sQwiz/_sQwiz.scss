@@ -5,7 +5,16 @@
 		 padding-top: 0;
 		 padding-bottom: 0;
 		 &__wrap{
-			 top: rem(-250);
+			 top: rem(-200);
+			 @include media-breakpoint-up(md) {
+			 top: rem(-170);
+			}
+			 @include media-breakpoint-only(lg) {
+				 top: rem(-240);
+			 }
+			@include media-breakpoint-up(xl) {
+				top: rem(-250);
+			}
 			 margin-bottom: rem(-200);
 			 position: relative;
 			 margin-left: auto;
@@ -45,8 +54,12 @@
 		}
 
 		&__body {
-			max-height: rem(600);
+			max-height: rem(1250);
+			@include media-breakpoint-up(md) {
+				max-height: rem(600);
+			}
 			overflow-y: auto;
+			overflow-x: hidden;
 		}
 
 		&__head{

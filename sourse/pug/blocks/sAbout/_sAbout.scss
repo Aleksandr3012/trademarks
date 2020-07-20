@@ -84,6 +84,7 @@
 				left: rem(-478);
 				position: absolute;
 				z-index: -1;
+				min-height: rem(450);
 			}
 			
 			@include media-breakpoint-up(xl) {

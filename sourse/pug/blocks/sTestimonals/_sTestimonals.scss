@@ -156,6 +156,10 @@
 	}
 
 	&__navigation {
+		margin-top: rem(59);
+		@include media-breakpoint-up(lg){
+			margin-top: rem(60);
+		}
 		position: relative;
 		display: block;
 		height: rem(11);

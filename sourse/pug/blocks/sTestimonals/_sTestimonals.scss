@@ -52,9 +52,15 @@
 			left: rem(-196);
 			top: rem(39);
 			width: rem(690);
-			height: 100.7%;
+			height: 100.8%;
 			// min-height: rem(484);
 			overflow: hidden;
+		}
+		@include media-breakpoint-up(xl) {
+			left: auto;
+			right: rem(-39);
+			overflow: initial;
+			width: calc(100% + 24vw);
 		}
 		@include media-breakpoint-only(md) {
 			width: 100vw;
@@ -64,6 +70,12 @@
 			@include media-breakpoint-up(lg) {
 				max-width: none;
 				height: 100%;
+			}
+			@include media-breakpoint-up(xl) {
+				max-width: 100%;
+				width: 100%;
+				object-fit: cover;
+				// height: auto;
 			}
 			height: auto;
 			max-width: 100%;
